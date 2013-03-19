@@ -15,4 +15,11 @@ class FizzBuzz{
             }
         }
     }
+
+    public static void main(String[] args){
+        if(args.length != 0){
+            int conv = Integer.parseInt(args[0]);
+            fizzBuzz(conv);
+        }
+    }
 }

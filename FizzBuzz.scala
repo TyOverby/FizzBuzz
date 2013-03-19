@@ -7,3 +7,5 @@ def fizzBuzz(n: Int){
   }
 }
 
+if(!argv.isEmpty)
+  fizzBuzz(argv(0).toInt)

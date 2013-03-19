@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int itoa(int i, char* buff);
 
@@ -25,8 +26,10 @@ void fizzBuzz(int n){
 }
 
 // Because we can't run this in a repl, this testing function will have to do.
-int main(void){
-    fizzBuzz(25);
+int main(int argc, char* argv[]){
+    if(argc > 1){
+        fizzBuzz(atoi(argv[1]));
+    }
 }
 
 // This function from https://code.google.com/p/my-itoa/

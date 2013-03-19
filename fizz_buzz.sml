@@ -8,3 +8,10 @@ fun fizz_buzz n =
     in
       fizz_helper 1
     end
+
+val _ = case CommandLine.arguments() of
+       [n] => (case Int.fromString(n) of
+                    SOME(n) => fizz_buzz(n)
+                  | NONE    => print(n ^ "is not a number"))
+
+     |   _ => print "none"
